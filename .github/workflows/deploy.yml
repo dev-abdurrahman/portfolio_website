@@ -3,7 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master # যখনি master ব্রাঞ্চে পুশ করবেন তখনি অটো রান হবে
+      - master
+
+permissions:
+  contents: write # এটি GitHub-কে ফাইল রাইট করার পারমিশন দিবে
 
 jobs:
   build:
