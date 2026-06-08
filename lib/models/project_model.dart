@@ -9,6 +9,7 @@ class ProjectModel {
   final String liveUrl;
   final String githubUrl;
   final String? apkUrl;
+  final String? iconPath;
   final List<Color> gradient;
   final ProjectType type;
   final bool isPopular;
@@ -20,6 +21,7 @@ class ProjectModel {
     required this.liveUrl,
     required this.githubUrl,
     this.apkUrl,
+    this.iconPath,
     required this.gradient,
     required this.type,
     this.isPopular = false,
@@ -27,6 +29,18 @@ class ProjectModel {
 }
 
 final List<ProjectModel> projects = [
+  ProjectModel(
+    title: 'তালিমুল কুরআন কায়দা',
+    description: 'সহজ পদ্ধতিতে কুরআন শেখার ডিজিটাল কায়দা অ্যাপ।',
+    tag: 'Flutter, Education',
+    liveUrl: '#',
+    githubUrl: 'https://github.com/dev-abdurrahman',
+    apkUrl: 'assets/apk/talimul_quran_qayda.apk',
+    iconPath: 'assets/apk/apps logo/talimul_quran_qayda.png',
+    gradient: [const Color(0xFF1B5E20), const Color(0xFF4CAF50)],
+    type: ProjectType.app,
+    isPopular: true,
+  ),
   ProjectModel(
     title: 'LuxeCart',
     description: 'Full WooCommerce fashion store with custom theme integration.',
@@ -85,6 +99,6 @@ final List<ProjectModel> projects = [
     apkUrl: 'https://github.com/YOUR_USERNAME/REPO_NAME/releases/download/v1.0.0/bazaar.apk',
     gradient: [const Color(0xFF880E4F), const Color(0xFF4A148C)],
     type: ProjectType.app,
-    isPopular: true,
+    isPopular: false,
   ),
 ];
